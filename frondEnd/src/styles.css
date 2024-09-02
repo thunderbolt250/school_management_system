@@ -1,0 +1,230 @@
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.bg-dark-custom {
+  background-color: #2c2c2c !important;
+}
+.log-div{
+  background-color: #a89696;
+}
+
+/* Sibebar.css */
+.sidebar-custom {
+  height: 100vh; /* Full viewport height */
+  position: sticky;
+  top: 0;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  background-color: #343a40; /* Dark background for the sidebar */
+  padding: 20px;
+  color: white;
+}
+
+.sidebar-custom h2 {
+  font-weight: bold;
+}
+.sidebar-custom nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-custom nav ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar-custom nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: color 0.15s ease-in-out;
+}
+
+.sidebar-custom nav ul li a:hover {
+  color: #5bc0de;
+  border: 1px solid orange;
+  border-radius: 10px;
+  padding-left: 10px;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .sidebar-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-container.show {
+    transform: translateX(0);
+  }
+}
+/* Header styles */
+.header-custom {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header-custom h1 {
+  margin: 0;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.header-custom .menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header-custom .menu-icon {
+    display: block;
+  }
+}
+
+/* Icon link styles */
+.icon-link {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #343a40;
+  transition: background-color 0.3s;
+  margin-left: 0.5rem; /* Add space between icons */
+}
+
+.icon-link:first-child {
+  margin-left: 0; /* Remove margin for the first icon */
+}
+
+.icon-link:hover {
+  background-color: #5bc0de;
+}
+
+.icon-circle {
+  font-size: 1.2rem;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: #343a40; /* Ensure the sidebar background color */
+  }
+
+  .sidebar-container.show {
+    display: block;
+  }
+}
+
+/* Dropdown menu styles */
+.header-custom {
+  position: relative; /* Ensure the header is a positioning context for dropdowns */
+}
+
+.icon-link {
+  position: relative; /* Ensure dropdowns are positioned relative to the icon */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #494646;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none; /* Hide dropdown by default */
+  color: white;
+  padding: 10px;
+}
+
+.icon-link .dropdown-menu {
+  display: block; /* Show dropdown when icon-link is clicked */
+}
+
+.notification-dropdown .dropdown-item,
+.profile-dropdown .dropdown-item {
+  padding: 10px;
+  white-space: nowrap;
+  color: white;
+}
+
+.profile-dropdown .dropdown-item {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.profile-dropdown .dropdown-item:hover,
+.notification-dropdown .dropdown-item:hover {
+  background-color: #867b7b;
+}
+.school-logo {
+  width: 150px; /* Adjust as necessary */
+  height: 100px; /* Adjust as necessary */
+  object-fit: cover; /* Ensures the image fits well within the specified dimensions */
+  border-radius: 10%; /* Optional: Makes the image circular */
+}
+
+/* table css */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th:first-child,
+.table td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.scrollable-container {
+  max-height: 350px; /* Adjust the height to fit 4 rows */
+  overflow-y: scroll;
+  border: 2px solid orange; /* Orange border */
+  margin-bottom: 20px; /* Space between components */
+  padding: 10px;
+  padding-top: 1px;
+  border-radius: 10px;
+}
+
+.school {
+  font-size: 40px;
+}
+.sub-menu {
+  padding-top: 10px;
+  padding-left: 30px;
+  list-style: none;
+  background-color: #474e57;
+  border-radius: 5px;
+}
+.sub-menu li {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
